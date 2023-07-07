@@ -1,8 +1,11 @@
 import React from 'react'
+import { styles } from '../style'
 
 const Works = () => {
   return (
-    <div>Works</div>
+    <section className={`${styles.paddingX} h-screen bg-[#fffaf3] `} id='works'>
+   
+    </section>
   )
 }
 
