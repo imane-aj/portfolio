@@ -5,24 +5,24 @@ import { styles } from '../style'
 const Navbar = () => {
   const [open, setOpen] = useState('false')
 
-  const [isScrolled, setIsScrolled] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    // Cleanup the event listener when the component unmounts
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  // const [isScrolled, setIsScrolled] = useState(false);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.scrollY > 0) {
+  //       setIsScrolled(true);
+  //     } else {
+  //       setIsScrolled(false);
+  //     }
+  //   };
+  //   window.addEventListener('scroll', handleScroll);
+  //   // Cleanup the event listener when the component unmounts
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
 
   return (
-    <nav className={`${styles.paddingX} pt-5 pb-5 fixed ${isScrolled? "top-0 bg-black" : "top-8 md:top-11"} left-0 w-full`}>
+    <nav className={`${styles.paddingX} pt-5 pb-5 absolute top-8 md:top-11 left-0 w-full`}>
       <div className=' md:flex md:justify-between '>
         <div className='flex justify-between'>
           <div className='flex items-center gap-2'>
@@ -37,14 +37,14 @@ const Navbar = () => {
           <li className='ml-[-10px] md:mx-4 hover:text-org duration-300 cursor-pointer mb-3 md:mb-0 text-[18px] font-bold'><span className='text-org opacity-0 md:opacity-100'>02.</span> About</li>
           <li className='ml-[-10px] md:mx-4 hover:text-org duration-300 cursor-pointer mb-3 md:mb-0 text-[18px] font-bold'><span className='text-org opacity-0 md:opacity-100'>03.</span> Technologies</li>
           <li className='ml-[-10px] md:mx-4 hover:text-org duration-300 cursor-pointer mb-3 md:mb-0 text-[18px] font-bold'><span className='text-org opacity-0 md:opacity-100'>04.</span> Contact</li>
-          <button className='border rounded-lg border-org py-1 pl-6 pr-14 ml-0 md:ml-9 relative hover:bg-org transition duration-500 text-[18px] font-bold'>Hire me
+          {/* <button className='border rounded-lg border-org py-1 pl-6 pr-14 ml-0 md:ml-9 relative hover:bg-org transition duration-500 text-[18px] font-bold'>Hire me
             <span className='absolute top-[9px] right-6'>
               <span class="relative flex h-3 w-3">
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
                 <span class="relative inline-flex rounded-full h-3 w-3 bg-org hover:bg-white"></span>
               </span>
             </span>
-          </button>
+          </button> */}
         </ul>
       </div>
     </nav>

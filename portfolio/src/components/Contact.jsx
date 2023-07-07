@@ -5,6 +5,7 @@ import emailjs from "@emailjs/browser";
 import { styles } from '../style'
 import { EarthCanvas } from "./canvas";
 import { slideIn } from "../utils/motion";
+import { contact } from "../assets";
 
 const Contact = () => {
   const formRef = useRef();
@@ -38,7 +39,7 @@ const Contact = () => {
           from_name: form.name,
           to_name: "JavaScript Mastery",
           from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
+          to_email: "ajroudi.im@gmail.com",
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
@@ -58,7 +59,7 @@ const Contact = () => {
           setLoading(false);
           console.error(error);
 
-          alert("Ahh, something went wrong. Please try again.");
+          alert("Ouups, something went wrong. Please try again.");
         }
       );
   };
@@ -67,7 +68,7 @@ const Contact = () => {
     <div className={`${styles.paddingX} h-screen xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}>
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className='flex-[0.75] bg-[#0c0b09] p-8 rounded-2xl'
+        className='flex-[0.50] h-fit m-auto bg-[#0c0b09] p-8 rounded-2xl'
       >
       <h2 className="text-[52px] font-bold text-org"> Contact &#x2f;&gt; </h2>
       <h3 className='font-[roboto] text-[20px] font-[600]'>GET IN TOUCH</h3>
@@ -85,7 +86,7 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder="What's your good name?"
-              className='md:w-[74%] bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className=' bg-[#14120f] py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
           <label className='flex flex-col'>
@@ -96,7 +97,7 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder="What's your web address?"
-              className='md:w-[74%] bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className=' bg-[#14120f] py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
           <label className='flex flex-col'>
@@ -107,13 +108,13 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder='What you want to say?'
-              className='md:w-[74%] bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className=' bg-[#14120f] py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
 
           <button
             type='submit'
-            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
+            className='bg-[#14120f] py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
           >
             {loading ? "Sending..." : "Send"}
           </button>
@@ -121,10 +122,33 @@ const Contact = () => {
       </motion.div>
 
       <motion.div
-        variants={slideIn("right", "tween", 0.2, 1)}
+        animate={{
+          y: [0, 24, 0]
+        }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          repeatType: 'loop'
+        }}
         className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
       >
-        <EarthCanvas />
+      <motion.img
+        src={contact}
+        alt="Moving Image"
+        className="mx-auto h-[100%]"
+        animate={{
+          x: [-100, 100, -50, -75, 50],
+          y: [-50, -75, 50, -100, 75],
+        }}
+        transition={{
+          duration: 30,
+          repeat: Infinity,
+          repeatType: 'loop',
+          ease: 'linear',
+        }}
+      />
+        {/* <img src={contact} className="mx-auto h-[100%]" /> */}
+        {/* <EarthCanvas /> */}
       </motion.div>
     </div>
   );

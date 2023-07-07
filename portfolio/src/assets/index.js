@@ -32,9 +32,13 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import contact from './contact.png'
+import data from './data.mp4'
 
 
 export {
+  data,
+  contact,
   mysql_PNG11,
   laravel,
   boot,
