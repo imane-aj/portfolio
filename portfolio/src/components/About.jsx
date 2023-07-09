@@ -1,10 +1,13 @@
 import React from 'react'
 import { styles } from '../style'
+import { about } from '../assets'
 
 const About = () => {
   return (
-    <section id='about' className={`${styles.paddingX} h-screen bg-[#fffaf3] flex justify-between`}>
-      <div className='md:w-[50%]'></div>
+    <section id='about' className={`${styles.paddingX} py-16 bg-[#fffaf3] flex flex-col md:flex-row md:justify-between`}>
+      <div className='md:w-[50%] m-auto'>
+        <img src={about} />
+      </div>
       <div className="md:w-[60%] relative text-black m-auto text-justify">
         <h2 className="text-[52px] font-bold text-org"> About Me &#x2f;&gt; </h2>
         <h3 className='font-[roboto] text-[20px] font-[600]'>LANGUAGE IS TEMPORARY, LOGIC IS PERMANENT ... 

@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import About from './components/About';
 import Works from './components/Works';
 import { Contact, StarsCanvas } from "./components";
+import { Footer } from "./components/Footer";
 
 
 const App = ()=> {
@@ -13,10 +14,11 @@ const App = ()=> {
     <Fragment>
       <Hero />
       <About/>
-      <Tech/>
-      <Works/>
       <div className="relative z-0">
+        <Tech/>
+        <Works/>
         <Contact/>
+        <Footer />
         <StarsCanvas/>
       </div>
     </Fragment>

@@ -65,10 +65,10 @@ const Contact = () => {
   };
 
   return (
-    <div className={`${styles.paddingX} h-screen xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}>
+    <div className={`${styles.paddingX} sm:h-auto md:h-screen xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}>
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className='flex-[0.50] h-fit m-auto bg-[#0c0b09] p-8 rounded-2xl'
+        className='sm:w-full md:flex-[0.50] h-fit bg-[#0c0b09] p-8 rounded-2xl'
       >
       <h2 className="text-[52px] font-bold text-org"> Contact &#x2f;&gt; </h2>
       <h3 className='font-[roboto] text-[20px] font-[600]'>GET IN TOUCH</h3>

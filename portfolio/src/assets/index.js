@@ -34,9 +34,22 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import contact from './contact.png'
 import data from './data.mp4'
-
+import wplion from './Wplion clone.png'
+import resto from './resto.jpeg'
+import eco8 from './eco8.jpeg'
+import promotion from './Promotion.png'
+import foodify from './foodify.png'
+import islam from './islamic.png'
+import about from './about.png'
 
 export {
+  about,
+  islam,
+  foodify,
+  promotion,
+  eco8,
+  resto,
+  wplion,
   data,
   contact,
   mysql_PNG11,
