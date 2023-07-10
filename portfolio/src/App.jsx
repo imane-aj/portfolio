@@ -14,9 +14,9 @@ const App = ()=> {
     <Fragment>
       <Hero />
       <About/>
+      <Tech/>
+      <Works/>
       <div className="relative z-0">
-        <Tech/>
-        <Works/>
         <Contact/>
         <Footer />
         <StarsCanvas/>

@@ -65,7 +65,7 @@ const Contact = () => {
   };
 
   return (
-    <div className={`${styles.paddingX} sm:h-auto md:h-screen xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}>
+    <div className={`${styles.paddingX} sm:h-auto md:h-screen xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`} id='contact'>
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
         className='sm:w-full md:flex-[0.50] h-fit bg-[#0c0b09] p-8 rounded-2xl'

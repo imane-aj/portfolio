@@ -27,16 +27,17 @@ const Navbar = () => {
         <div className='flex justify-between'>
           <div className='flex items-center gap-2'>
             <img src={logo} className='h-12 cursor-pointer object-contain' onClick={()=>{window.scrollTo(0,0)}}/>
-            <p className='text-white text-[18px] font-bold cursor-pointer flex'>Imane Ajroudi &nbsp;<span className='sm:block hidden'>| Laravel & ReactJs</span></p>
+            <p className='text-white text-[18px] font-bold cursor-pointer flex'>Imane Ajroudi&nbsp;<span className='sm:block hidden'> | Developer</span></p>
           </div>
           <img src={open? close : menu} className='w-[28px] cursor-pointer block md:hidden' onClick={()=>setOpen(!open)}/>
         </div>
         
         <ul className={`md:flex md:items-center mt-4 md:mt-0 z-[-1] md:z-auto md:static absolute bg-gradient-to-r from-org md:bg-transparent md:from-inherit w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 transition-all duration-500 ease-in
         ${open? 'top-20 opacity-100':'top-[-490px]'} md:opacity-100`}>
-          <li className='ml-[-10px] md:mx-4 hover:text-org duration-300 cursor-pointer mb-3 md:mb-0 text-[18px] font-bold'><span className='text-org opacity-0 md:opacity-100'>02.</span> About</li>
-          <li className='ml-[-10px] md:mx-4 hover:text-org duration-300 cursor-pointer mb-3 md:mb-0 text-[18px] font-bold'><span className='text-org opacity-0 md:opacity-100'>03.</span> Technologies</li>
-          <li className='ml-[-10px] md:mx-4 hover:text-org duration-300 cursor-pointer mb-3 md:mb-0 text-[18px] font-bold'><span className='text-org opacity-0 md:opacity-100'>04.</span> Contact</li>
+          <li className='ml-[-10px] md:mx-4 hover:text-org duration-300 cursor-pointer mb-3 md:mb-0 text-[17px] '><a href='#about'><span className='text-org opacity-0 md:opacity-100 font-mono'>02.</span> About</a></li>
+          <li className='ml-[-10px] md:mx-4 hover:text-org duration-300 cursor-pointer mb-3 md:mb-0 text-[17px] '><a href='#teck'><span className='text-org opacity-0 md:opacity-100 font-mono'>03.</span> Technologies</a></li>
+          <li className='ml-[-10px] md:mx-4 hover:text-org duration-300 cursor-pointer mb-3 md:mb-0 text-[17px] '><a href='#works'><span className='text-org opacity-0 md:opacity-100 font-mono'>04.</span> Projects</a></li>
+          <li className='ml-[-10px] md:mx-4 hover:text-org duration-300 cursor-pointer mb-3 md:mb-0 text-[17px] '><a href='#contact'><span className='text-org opacity-0 md:opacity-100 font-mono'>04.</span> Contact</a></li>
           {/* <button className='border rounded-lg border-org py-1 pl-6 pr-14 ml-0 md:ml-9 relative hover:bg-org transition duration-500 text-[18px] font-bold'>Hire me
             <span className='absolute top-[9px] right-6'>
               <span class="relative flex h-3 w-3">

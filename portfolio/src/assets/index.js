@@ -41,8 +41,10 @@ import promotion from './Promotion.png'
 import foodify from './foodify.png'
 import islam from './islamic.png'
 import about from './about.png'
+import developer from './developer.png'
 
 export {
+  developer,
   about,
   islam,
   foodify,

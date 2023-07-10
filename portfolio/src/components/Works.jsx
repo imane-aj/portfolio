@@ -77,7 +77,7 @@ const Works = () => {
       <div className={`mb-9`}>
         <h3 className='font-[roboto] text-[20px] font-[600] text-black'>MY WORK</h3>
         <h2 className="text-[52px] font-bold text-org"> Projects &#x2f;&gt; </h2>
-        <p className='mt-3 text-[17px] max-w-2xl leading-[30px] text-black text-justify'>
+        <p className='mt-3 text-[17px] max-w-2xl leading-[30px] text-black'>
           My portfolio comprises a collection of projects that showcase my skills and experience through real-world examples. 
           Each project is accompanied by a brief description, as well as links to code repositories. These projects provide tangible evidence of my ability to tackle complex problems, work with various technologies, and effectively manage projects.
         </p>
