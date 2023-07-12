@@ -7,7 +7,6 @@ import Works from './components/Works';
 import { Contact, StarsCanvas } from "./components";
 import { Footer } from "./components/Footer";
 
-
 const App = ()=> {
 
   return (

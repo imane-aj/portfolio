@@ -4,11 +4,11 @@ import { about } from '../assets'
 
 const About = () => {
   return (
-    <section id='about' className={`${styles.paddingX} py-16 bg-[#fffaf3] flex flex-col md:flex-row md:justify-between`}>
-      <div className='md:w-[50%] m-auto'>
+    <section id='about' className={`${styles.paddingX} py-16 bg-[#fffaf3] flex flex-col lg:flex-row lg:justify-between`}>
+      <div className='lg:w-[50%] m-auto aos-init aos-animate' data-aos="fade-down">
         <img src={about} />
       </div>
-      <div className="md:w-[60%] relative text-black m-auto text-justify">
+      <div className="lg:w-[60%] relative text-black m-auto md:text-justify" data-aos="fade-up">
         <h2 className="text-[52px] font-bold text-org"> About Me &#x2f;&gt; </h2>
         <h3 className='font-[roboto] text-[20px] font-[600]'>LANGUAGE IS TEMPORARY, LOGIC IS PERMANENT ... 
           <span className='block text-org text-sm'>#coding &nbsp; #userSatisfaction</span></h3>

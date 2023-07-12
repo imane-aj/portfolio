@@ -54,12 +54,39 @@ body{
   background: linear-gradient(
     to right,
     #575757,
-    #000000
+    #dedede
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
+.white-gradient {
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #575757,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #636363,
+    #1c1c1c
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.bb-gradient {
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #575757,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #636363,
+    #1c1c1c
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 .orange-gradient {
   background: #e24f01;
   background: linear-gradient(-90deg, #e24f01 0%, rgba(60, 51, 80, 0) 100%);
@@ -231,12 +258,12 @@ body{
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
 }
-.hero{
+/* .hero{
   /* background-image: url('/src/assets/hero.png'); */
-  height: 100vh;
+  /* height: 100vh; */
   /* background-repeat: no-repeat;
   background-size: cover; */
-}
+
 nav{
   background: rgb(25 23 19 / 72%);
   border-bottom: 1px solid rgba(12, 11, 9, 0.6);
@@ -262,11 +289,11 @@ nav{
   width: 110%;
 } */
 
-@media (max-width: 500px) {
+/* @media (max-width: 500px) {
   .swiper-slide {
     width: 28rem !important;
   }
-}
+} */
 
 
 .swiper-slide-shadow-left,

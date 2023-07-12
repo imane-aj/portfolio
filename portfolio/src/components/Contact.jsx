@@ -6,6 +6,7 @@ import { styles } from '../style'
 import { EarthCanvas } from "./canvas";
 import { slideIn } from "../utils/motion";
 import { contact } from "../assets";
+import Swal from "sweetalert2";
 
 const Contact = () => {
   const formRef = useRef();
@@ -33,21 +34,42 @@ const Contact = () => {
 
     emailjs
       .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        'service_v8oiu2e',
+        'template_wwuux5n',
         {
           from_name: form.name,
-          to_name: "JavaScript Mastery",
+          to_name: "Imane Ajroudi",
           from_email: form.email,
           to_email: "ajroudi.im@gmail.com",
           message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        'd2YD56-qD0nPYOCDL'//public key
       )
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+          let timerInterval
+          Swal.fire({
+            title: 'Message sent successfully!',
+            html: 'Thank you. I will get back to you as soon as possible.',
+            timer: 4000,
+            timerProgressBar: true,
+            didOpen: () => {
+              Swal.showLoading()
+              const b = Swal.getHtmlContainer().querySelector('b')
+              timerInterval = setInterval(() => {
+                b.textContent = Swal.getTimerLeft()
+              }, 100)
+            },
+            willClose: () => {
+              clearInterval(timerInterval)
+            }
+          }).then((result) => {
+            /* Read more about handling dismissals below */
+            if (result.dismiss === Swal.DismissReason.timer) {
+              console.log('I was closed by the timer')
+            }
+          })
 
           setForm({
             name: "",
@@ -70,13 +92,12 @@ const Contact = () => {
         variants={slideIn("left", "tween", 0.2, 1)}
         className='sm:w-full md:flex-[0.50] h-fit bg-[#0c0b09] p-8 rounded-2xl'
       >
+      <h3 className='font-[roboto] text-[20px] font-[600] black-gradient'>GET IN TOUCH</h3>
       <h2 className="text-[52px] font-bold text-org"> Contact &#x2f;&gt; </h2>
-      <h3 className='font-[roboto] text-[20px] font-[600]'>GET IN TOUCH</h3>
-
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className='mt-12 flex flex-col gap-8'
+          className='mt-4 flex flex-col gap-8'
         >
           <label className='flex flex-col'>
             {/* <span className='text-white font-medium mb-4'>Your Name</span> */}
@@ -86,7 +107,7 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder="What's your good name?"
-              className=' bg-[#14120f] py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className=' bg-[#14120f] py-4 px-6 placeholder:black-gradient text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
           <label className='flex flex-col'>
@@ -97,7 +118,7 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder="What's your web address?"
-              className=' bg-[#14120f] py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className=' bg-[#14120f] py-4 px-6 placeholder:black-gradient text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
           <label className='flex flex-col'>
@@ -108,13 +129,13 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder='What you want to say?'
-              className=' bg-[#14120f] py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className=' bg-[#14120f] py-4 px-6 placeholder:black-gradient text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
 
           <button
             type='submit'
-            className='bg-[#14120f] py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
+            className='bg-[#14120f] py-3 px-8 rounded-xl outline-none w-fit font-bold shadow-md shadow-primary'
           >
             {loading ? "Sending..." : "Send"}
           </button>

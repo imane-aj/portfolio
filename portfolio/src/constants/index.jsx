@@ -199,7 +199,7 @@ import {
     {
       name: "Islamic History",
       description:
-        "A web app that performs various functions such as adding, removing, sign up, etc.., where the admin can manage the Menu, and the latter is shown directly to the users.",
+        "Website dedicated to providing comprehensive information on Islamic history. Designed for users seeking to explore and learn about the rich heritage of Islam.",
       tags: [
         {
           name: "ReactJs",
